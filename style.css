@@ -1,0 +1,989 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    line-height: 1.5;
+}
+a{
+    text-decoration: none;
+    color: #2b2b2b;
+}
+.header{
+    width: 100%;
+    
+}
+.header nav{
+    position: fixed;
+    z-index: 200;
+    width: 100%;
+    padding: 11px 0;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #235a87;
+}
+.logo svg{
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+}
+.toi{
+    height: 18px;
+}
+.toi img{
+    width:104px;
+    height: 20px;
+}
+.search_box{
+    padding: 3px 5px;
+    border-radius: 20px ;
+    background-color: #2c6a92;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.search_box input{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    padding: 0 6px ;
+    color: #ffffff;
+    border: none;
+    background-color: #2c6a92;
+    width: 68px;
+    height: 16px;
+}
+.search_box svg{
+    
+    width: 20px;
+    height: 20px;
+}
+.search_box svg path{
+    fill: #ffffff;
+}
+.hamburger{
+    height: 47px;
+}
+.hamburger svg{
+    width: 32px;
+    height: 48px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+    background-image: linear-gradient(180deg,#235a87,#d8eeee);
+    background-repeat: no-repeat;
+}
+.bradius{
+    border-radius: 6px;
+}
+.widthc{
+    width: 310px;
+}
+.weather_data_templet{
+    margin-top: 80px;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    
+   background-image: url("https://s.w-x.co/WeatherImages_Web/WeatherImage_Drizzle-day_2.jpg?crop=16:9&width=800&format=pjpg&auto=webp&quality=70");
+    height: 165px;
+}
+.weather_location{
+    position: absolute;
+    padding: 9px 0;
+    top: 0;
+    width:100%;
+    border-radius: 6px 6px 0 0;
+
+    background-color: #0000008c;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.weather_location div:nth-child(1){
+    padding :0 0 0 20px ;
+    color: #ffffff;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+.weather_location div:nth-child(2){
+    color: #ffffff;
+    font-size: .8125rem;
+    padding-bottom: 2px;
+}
+.weather_data{
+
+    width: 100%;
+    margin-top: 38px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.weather_info{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.weather_info div:nth-child(n){
+    color:white;
+    text-shadow: 0 0 5px rgb(23 36 50 / 50%);
+    text-align: left;
+}
+.weather_info div:nth-child(1){
+    
+    font-size: 3.5rem;
+    line-height: 1;
+    font-weight: 500;
+}
+.weather_info div:nth-child(2),
+.weather_info div:nth-child(3)
+{
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.1;
+}
+.weather_icon svg{
+    width: fit-content;
+}
+.top_stories{
+    box-shadow: 0 0 5px gray;
+    background-color: #ffffff;
+    height: auto;
+}
+
+.tp_top_swiper{
+    width:100%;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap:10px;
+}
+.tp_top_swiper .part_tp{
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.part_tp2{
+    display: flex;
+    flex-direction: row;
+    gap:15px;
+    align-items: flex-start;
+}
+.top_story_container{
+    gap: 20px;
+    padding: 15px 0 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.c_story,.c_story1{
+    padding: 0 10px 10px 0;
+    gap:8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.c_story:hover a ,.c_story1:hover a{
+  color: #0c6bb8;
+}
+.c_story1 img{
+   width: 275px;
+   height: 155px;
+}
+.c_story img{
+    width: 275px;
+    height: 155px;
+}
+.c_story a,.c_story1 a{
+
+    display: -webkit-box;
+    max-width: 275px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.3;
+    height: auto;
+    text-decoration: none;
+    color: #2b2b2b;
+}
+.tp_desktop{
+    display: none;
+}
+.title_ts{
+    padding: 0 0 10px 0;
+    font-size: 1.25rem;
+    flex-grow: 1;
+    color:#2b2b2b ;
+    font-weight: 600;
+    line-height: 1;
+}
+.tp_swiper_card{
+    padding: 0 10px 0 0;
+    gap:4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.tp_swiper_card:hover a ,
+.side_section_desktop:hover a,
+.tp_desktop_data:hover a{
+    color: #0c6bb8;
+}
+.tp_swiper_card img{
+    width: 147px;
+    height: 83px;
+}
+.tp_swiper_card a ,.side_section_desktop a{
+
+    display: -webkit-box;
+    max-width: 147px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: #2b2b2b;
+    text-decoration: none;
+    height: auto;
+    line-height: 1.2;
+    font-size: .875rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.tp_swipe1,.tp_swipe2,.tp_swipe3{
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap:15px;
+}
+
+.top_story_container button{
+    background-color: #1b4de4;
+    border: #1b4de4 1px solid;
+    color:#ffffff;
+    font-size: .8125rem; 
+    font-weight: 700;
+    border-radius: 20px;
+    padding: 8px 14px;
+    margin-bottom: 20px;
+}
+.top_story_container button:hover{
+    box-shadow: 0px 0px 8px #0c6bb8;
+}
+.top_video{
+    width: 275px;
+    height: 155px;
+    background-repeat: no-repeat;
+    background-image: url("https://v.w-x.co/1655728646806_DIAMOND_SHAPED_SUSPENSION_BRIDGE_HighRes_avc_mpeg4_6000kbps.jpg?crop=16:9&width=300&format=pjpg&auto=webp&quality=60");
+}
+.top_video{
+    position: relative;
+}
+.top_video svg{
+    position: absolute;
+    top:34%;
+    right: 41%;
+}
+.last_section{
+    margin-bottom:74px ;
+}
+
+.footer_mobile{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #ffffff;
+    box-shadow : 0 -1px 10px #c4c3c3;
+    padding: 10px 0;
+    display: flex;
+    flex-direction:row ;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer_icon{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+     color: #757575;
+}
+.footer_icon:hover{
+    color: #2b2b2b;
+}
+.footer_icon svg{
+    width: 28px;
+    height: 28px;
+}
+.footer_icon span{
+    margin-top: -18px;
+    font-size: .75rem;
+}
+.footer_icon div{
+    width: auto;
+    height: 14px;
+    font-size: .75rem;
+    line-height: 1.2;
+}
+.ibm img{
+    display: none;
+   }
+   .top_video svg{
+    width: 54px;
+  }
+  .nav_world_icon{
+    display: none;
+  }
+  .weather_bash{
+    display: none;
+  }
+  .menu{
+    display: none;
+  }
+  .width_white1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:10px;
+
+  }
+  .tdesk{
+    display: none;
+  }
+  .ls_desk{
+    display: none;
+  }
+  .width_white2{
+    display: none;
+  }
+  .footer_laptop{
+    display: none;
+  }
+  .lol{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.gh{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:20px;
+}
+@media screen and (min-width:375px) {
+    .tp_desktop{
+        display: none;
+    }
+    
+    .search_box input{
+        width: 117px;
+    }
+    .widthc{
+        width: 360px;
+    }
+    .weather_data{
+        gap: 63px;
+    }
+    .c_story img{
+        width: 333px;
+        height: 180px;
+    }
+    .top_video{
+        width: 333px;
+        height: 180px;
+        background-image: url(https://v.w-x.co/1655728646806_DIAMOND_SHAPED_SUSPENSION_BRIDGE_HighRes_avc_mpeg4_6000kbps.jpg?crop=16:9&width=340&format=pjpg&auto=webp&quality=60);
+    }
+    .ibm img{
+        display: none;
+       }
+       .top_video svg{
+        width: 54px;
+      }
+      .nav_world_icon{
+        display: none;
+      }
+      .weather_bash{
+        display: none;
+      }
+      .menu{
+        display: none;
+      }
+      .tdesk{
+        display: none;
+      }
+      .ls_desk{
+        display: none;
+      }
+      .width_white2{
+        display: none;
+      }
+      .footer_laptop{
+        display: none;
+      }
+}  
+@media screen and (min-width:425px) {
+    .tp_desktop{
+        display: none;
+    }
+    .search_box input{
+        width: 165px;
+    }
+    .widthc{
+        width: 411px;
+    }
+    .c_story img{
+        width: 380px;
+        height: 210px;
+    }
+    .top_video{
+        width: 380px;
+        height: 210px;
+        background-image: url(https://v.w-x.co/1655728646806_DIAMOND_SHAPED_SUSPENSION_BRIDGE_HighRes_avc_mpeg4_6000kbps.jpg?crop=16:9&width=390&format=pjpg&auto=webp&quality=60);
+    }
+    .weather_data{
+        gap: 97px;
+    }
+    .ibm img{
+        display: none;
+       }
+       .top_video svg{
+        width: 54px;
+      }
+      .nav_world_icon{
+        display: none;
+      }
+      .weather_bash{
+        display: none;
+      }
+      .menu{
+        display: none;
+      }
+      .tdesk{
+        display: none;
+      }
+      .ls_desk{
+        display: none;
+      }
+      .width_white2{
+        display: none;
+      }
+      .footer_laptop{
+        display: none;
+      }
+}
+@media screen and (min-width:768px) {
+    .tp_desktop{
+        display: none;
+    }
+   .search_box{
+    padding: 4px 33px;
+   }
+   .search_box input{
+     width: 170px;
+   }
+   .header nav{
+    justify-content: center;
+    gap: 54px;
+   }
+   .widthc{
+    width: 595px;
+   }
+   .weather_data{
+    gap: 275px;
+   }
+   .c_story1{
+    width: 47%;
+   }
+   .tp_top_swiper{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    overflow-x: unset;
+   }
+   .tp_swipe {
+    display: flex;
+    flex-direction: column;
+    overflow: unset;
+    align-items: flex-start;
+    gap:20px;
+
+   }
+   .part_tp2{
+    gap: 30px;
+   }
+   .c_story img{
+    width: 562px;
+    height: 335px;
+   }
+   .c_story a{
+    max-width:536px ;
+   }
+   .top_video{
+    width: 562px;
+    height: 335px;
+    background-image: url(https://v.w-x.co/1655728646806_DIAMOND_SHAPED_SUSPENSION_BRIDGE_HighRes_avc_mpeg4_6000kbps.jpg?crop=16:9&width=600&format=pjpg&auto=webp&quality=60);
+  }
+  .top_video svg{
+    width: 101px;
+  }
+  .ibm img{
+   display: none;
+  }
+  .nav_world_icon{
+    display: none;
+  }
+  .weather_bash{
+    display: none;
+  }
+  .menu{
+    display: none;
+  }
+  .tdesk{
+    display: none;
+  }
+  .ls_desk{
+    display: none;
+  }
+  .width_white2{
+    display: none;
+  }
+  .footer_laptop{
+    display: none;
+  }
+}
+
+@media screen and (min-width:1024px) {
+    .widthc{
+        width: 794px;
+    }
+    .logo svg{
+        width: 70px;
+        height: 70px;
+    }
+    .ibm img{
+        display: block;
+        width: 146px;
+        height: 23px;
+        padding: 0 20px 0 0;
+        border-right: #c4c3c3 2px solid;
+    }
+    .other_logo{
+        display: flex;
+        flex-direction: row;
+    }
+    .toi img{
+        padding: 0 0 0 20px;
+        width: 125px;
+        height: 24px;
+    }
+    .header nav{
+        position: static;
+        gap:0;
+        justify-content: space-around;
+
+    }
+    .nav_world_icon{
+       
+        border-radius: 6px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 140px;
+        height: 11px;
+    }
+    .globe svg{
+        width: 19px;
+        height: 19px;
+    }
+    .arrow_down svg{
+        width: 19px;
+        height:19px;
+        fill:#ffffff
+    }
+    .temp,.gt{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+       
+    }
+    .gt{
+        border-right: #ffffff 2px solid;
+        height: 20px;
+    }
+    .temp div:nth-child(1),
+    .gt div:nth-child(2){
+        font-size: 20px;
+        width: 36px;
+        height: 3px;
+        color: #ffffff;
+    }
+    .gt div:nth-child(2){
+        padding: 0 10px 30px 7px;
+
+        
+    }
+    .temp div:nth-child(1){
+        padding: 0 0 30px 10px;
+    }
+    .hamburger svg {
+        width: 41px;
+        height: 48px;
+    }
+    .search_box {
+        padding: 8px 5px 8px 9px;
+        justify-content: space-between;
+        width: 300px;
+    }
+    
+    .search_box input {
+        text-align: center;
+        font-size: 17px;
+        width: 240px;
+        height: 21px;
+    }
+    .weather_data_templet {
+        margin: 10px;
+        
+    }
+
+    .weather_bash{
+        display: block;
+        width: 100%;
+        height: 40px;
+        background-color: #357a9e;
+    }
+
+    
+    .menu{
+        background-color: #123650;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 90px;
+    }
+    .menu_element{
+        width: auto;
+        height: 40px;
+        color: #ffffff;
+    }
+    .menu_element:hover{
+        border-bottom: #ffffff 2px solid;
+    }
+    .menu_icon{
+        gap: 6px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .menu_icon .arrow_down{
+        width: 30px;
+        height: 15px;
+    }
+    .v_icon{
+        width: 30px;
+        height: 30px;
+    }
+    .weather_data_templet{
+        display: none;
+    }
+    
+    .footer_mobile{
+        display: none;
+    }
+    .tp_top_swiper{
+        display: none;
+    }
+    .tp_desktop_data{
+        width: 610px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap:10px;
+
+    }
+    .tp_desktop{
+        display:flex ;
+        flex-direction: row;
+        align-items: flex-start;
+        gap:10px
+    }
+    .tp_desktop_data_section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:15px;
+    }
+    
+    .tp_desktop_data img{
+        width: 597px;
+        height: 336px;
+    }
+    .tp_desktop_data a{
+        width: 597px;
+    }
+    .tp_desktop_data a,.c_story a{
+        
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+    .c_story a{
+        max-width: 764px;
+    }
+    .side_section_desktop{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap:10px;
+    }
+    .side_section_desktop img{
+           width: 143px;
+           height: 81px;
+    }
+    .side_section_desktop a{
+        width: 143px;
+        height: auto;
+    }
+    .tp_desktop_rm{
+        line-height: 1.2;
+    }
+    .tp_desktop_rm .rm{
+        padding-top:20px ;
+        line-height: 1.5;
+        font-size: 15px;
+        color:#1b4de4;
+        font-weight: 500;
+    }
+  
+    .tp_swipe1{
+        display: none;
+    }
+    .c_story img{
+        width: 764px;
+        height: 425px;
+    }
+    .tp_swipe2{
+        gap: 46px;
+    }
+    .part_tp2{
+        gap:46px;
+    }
+    .trending{
+        display: none;
+    }
+    .tdesk{
+        display: block;
+      }
+    .tp_swipe4{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:15px;
+    }
+    .ls_till_tab{
+        display: none;
+    }
+    .ls_desk{
+        display: block;
+      }
+    .top_video{
+        width: 143px;
+        height: 80px;
+        background-image: url(https://v.w-x.co/1655728646806_DIAMOND_SHAPED_SUSPENSION_BRIDGE_HighRes_avc_mpeg4_6000kbps.jpg?crop=16:9&width=150&format=pjpg&auto=webp&quality=60);
+
+    }
+    .top_video svg{
+        width: 30px;
+      }
+    .vc{
+        width: 143px;
+    }
+    .vc a{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .vtd{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap:40px
+    }
+    .vtd_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .width_white2{
+        display: block;
+        width: fit-content;
+        height: fit-content;
+        background-color: #ffffff;
+        padding: 15px 20px 15px 20px;
+    }
+    .wt{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap:15px
+        
+    }
+    .width_white2 div{
+        color: #2b2b2b;
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+    .div_section_desktop{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 20px;
+
+    }
+    .tp_swipe2{
+        overflow-x: hidden;
+    }
+    .footer_laptop{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto;
+        background-color: #ffffff;
+    }
+   
+    .connect_us svg{
+        background-color: #cfdaf9;
+        width: 26px;
+        height: 26px;
+        padding: 10px;
+        border-radius: 50px;
+        fill:#2B2B2B;
+    }
+    .connect_us svg:hover{
+        background-color: #1b4de4;
+        fill:white;
+    }
+    .connect_us{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    .connect_us div{
+        color: #2B2B2B;
+        font-size: 1.125rem;
+        font-weight: 700;
+        align-self: center;
+    }
+    .fd_cpy_logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    .fd_sb{
+       
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 600px;
+        padding: 20px 0;
+    }
+    .fd_bb{
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .fwp {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap:20px
+    }
+    .fwp a{
+        font-size: 15px;
+    }
+    .fwp a:hover,.tpad a:hover,.dr a:hover{
+        color: #0c6bb8;
+    }
+    .tpad{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+        font-weight: 700;
+        font-size: 16px;
+    
+    }
+    .tpad a{
+        padding:0 20px 0 20px ;
+        border-right: 2px solid;
+    }
+    .tpad a:nth-child(4){
+        border: none;
+    }
+    .geo_icon{
+        margin: 10px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap:10px;
+    }
+    .dr{
+        margin: 10px 0;
+    }
+    .dr a{ 
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .ibm_cloud{
+        margin: 10px 0;
+    }
+    .ibm_cloud a{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .ibm_icon_tb{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .ibm_icon_tb img{
+        margin: 0 10px;
+    }
+    .part_tp_temp{
+        display: none;
+    }
+    .see_more .part_tp_temp{
+        display: block;
+    }
+    .lol{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+}
