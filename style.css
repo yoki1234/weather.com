@@ -974,16 +974,25 @@ a{
     .ibm_icon_tb img{
         margin: 0 10px;
     }
-    .part_tp_temp{
+    .part_tp_temp,.cc,.tp_desktop_rm_hide,.tp_desktop_rm_hide{
         display: none;
     }
     .see_more .part_tp_temp{
         display: block;
     }
-    .lol{
-        display:flex;
+    .read_more .cc{
+        display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 20px;
     }
+    .read_morep .tp_desktop_rm_hide{
+        display: inline;
+    }
+    .tmr{
+       cursor: pointer;
+    }
+    .tp_desktop_rm{
+        width: 600px;
+    }
+    
 }
