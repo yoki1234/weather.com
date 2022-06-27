@@ -29,7 +29,7 @@ read_morep.addEventListener('click',()=>{
         read_morep.innerText='< Read Less';
     }
     else{
-        read_morep.innerText='Read More >'
+        read_morep.innerText='Read More >';
     }
     
 })
