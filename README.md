@@ -1,5 +1,5 @@
 # weather.com
-replica of weather.com site
+replica of <a href="https://weather.com/en-IN/?Goto=Redirected"> weather.com </a> site
 
 The buttons that have functionality to it are:
 - Read-more button on top-stories section [for showing rest of the information].
